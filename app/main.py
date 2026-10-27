@@ -48,6 +48,4 @@ def create_app() -> FastAPI:
     return app
 
 
-app = create_app()git add .
-git commit -m "refactor: flatten frontend to root, set single api rewrite, and add route fallbacks"
-git push origin main
+app = create_app()
