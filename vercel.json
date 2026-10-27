@@ -3,14 +3,6 @@
     {
       "source": "/api/(.*)",
       "destination": "/api/index.py"
-    },
-    {
-      "source": "/",
-      "destination": "/cbt-frontend/index.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/cbt-frontend/$1"
     }
   ]
 }
