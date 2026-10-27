@@ -45,10 +45,7 @@ def get_student_record(matric_no: str):
     return None, None
 
 
-@router.post("/api/auth/login", summary="Candidate Login")
-@router.post("/auth/login", summary="Candidate Login Fallback")
-@router.post("/api/login", summary="Direct Login Fallback")
-@router.post("/login", summary="Root Login Fallback")
+@router.post("/login", summary="Candidate Login")
 async def student_login(payload: LoginRequest):
     _, student_data = get_student_record(payload.matric_no)
 

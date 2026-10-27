@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-# Core router imports
 from app.routers.auth import router as auth_router
 from app.routers.exam import router as exam_router
 from app.routers.admin import router as admin_router
@@ -14,7 +13,6 @@ def create_app() -> FastAPI:
         openapi_url="/api/openapi.json",
     )
 
-    # 1. Configure CORS
     app.add_middleware(
         CORSMiddleware,
         allow_origins=["*"],
@@ -23,31 +21,29 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
-    # 2. Health check endpoint
-    @app.get("/api/health", tags=["Health"])
-    @app.get("/health", tags=["Health"])
-    async def health_check():
-        return {"status": "ok", "message": "FastAPI is live"}
+    # Health check
+    @app.get("/api/health")
+    @app.get("/health")
+    async def health():
+        return {"status": "ok"}
 
-    # 3. Mount API routers
-    # Mount auth router under all possible prefixes
-    app.include_router(auth_router, prefix="/api", tags=["Auth"])
+    # Mount auth router under all possible path prefixes
     app.include_router(auth_router, prefix="/api/auth", tags=["Auth"])
-    app.include_router(auth_router, prefix="", tags=["Auth Root"])
+    app.include_router(auth_router, prefix="/auth", tags=["Auth"])
+    app.include_router(auth_router, prefix="/api", tags=["Auth"])
+    app.include_router(auth_router, prefix="", tags=["Auth"])
+
+    # Mount admin router under all possible path prefixes
+    app.include_router(admin_router, prefix="/api/admin", tags=["Admin"])
+    app.include_router(admin_router, prefix="/admin", tags=["Admin"])
+    app.include_router(admin_router, prefix="/api", tags=["Admin"])
+    app.include_router(admin_router, prefix="", tags=["Admin"])
 
     # Mount exam router
     app.include_router(exam_router, prefix="/api/exam", tags=["Exam"])
-    app.include_router(exam_router, prefix="/api", tags=["Exam Fallback"])
-    app.include_router(exam_router, prefix="", tags=["Exam Root"])
-
-    # Mount admin router
-    app.include_router(admin_router, prefix="/api/admin", tags=["Admin"])
-    app.include_router(admin_router, prefix="", tags=["Admin Root"])
-
-    # Fallback mounts without /api prefix
-    app.include_router(auth_router, prefix="/auth", tags=["Auth Fallback"])
-    app.include_router(exam_router, prefix="/exam", tags=["Exam Fallback"])
-    app.include_router(admin_router, prefix="/admin", tags=["Admin Fallback"])
+    app.include_router(exam_router, prefix="/exam", tags=["Exam"])
+    app.include_router(exam_router, prefix="/api", tags=["Exam"])
+    app.include_router(exam_router, prefix="", tags=["Exam"])
 
     return app
 
