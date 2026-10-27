@@ -2,34 +2,28 @@ from fastapi import APIRouter, HTTPException, status
 from app.database import db
 from app.models import LoginRequest
 
-router = APIRouter(prefix="/api", tags=["Authentication"])
+router = APIRouter(tags=["Authentication"])
 
 
 def get_student_record(matric_no: str):
-    """
-    Search for a student in Firestore by document ID or 'matric_no' field.
-    Returns a tuple of (document_reference, document_data_dict) or (None, None).
-    """
     if db is None:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
-            detail="Database connection not initialized. Please configure serviceAccountKey.json.",
+            detail="Database connection not initialized.",
         )
 
     clean_matric = matric_no.strip()
 
-    # 1. Lookup by document ID (case-sensitive and upper-cased)
-    doc_ref = db.collection("students").document(clean_matric)
-    doc = doc_ref.get()
+    # 1. Direct document ID lookup (exact or uppercase)
+    doc = db.collection("students").document(clean_matric).get()
     if doc.exists:
-        return doc_ref, doc.to_dict()
+        return doc.reference, doc.to_dict()
 
-    doc_ref_upper = db.collection("students").document(clean_matric.upper())
-    doc_upper = doc_ref_upper.get()
+    doc_upper = db.collection("students").document(clean_matric.upper()).get()
     if doc_upper.exists:
-        return doc_ref_upper, doc_upper.to_dict()
+        return doc_upper.reference, doc_upper.to_dict()
 
-    # 2. Query where matric_no field matches
+    # 2. Field query fallback
     query = (
         db.collection("students")
         .where("matric_no", "==", clean_matric)
@@ -51,15 +45,11 @@ def get_student_record(matric_no: str):
     return None, None
 
 
-@router.post("/login", summary="Candidate Login")
+@router.post("/api/auth/login", summary="Candidate Login")
+@router.post("/auth/login", summary="Candidate Login Fallback")
+@router.post("/api/login", summary="Direct Login Fallback")
+@router.post("/login", summary="Root Login Fallback")
 async def student_login(payload: LoginRequest):
-    """
-    Authenticate candidate by matriculation number.
-    
-    - 200: Successfully authenticated and eligible to take the CBT exam.
-    - 403: Exam has already been submitted by candidate.
-    - 404: Matriculation number not found in student database.
-    """
     _, student_data = get_student_record(payload.matric_no)
 
     if not student_data:
@@ -68,7 +58,6 @@ async def student_login(payload: LoginRequest):
             detail=f"Student with matric number '{payload.matric_no}' not found.",
         )
 
-    # Check if student has already submitted the exam
     if student_data.get("has_taken", False):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
