@@ -30,9 +30,19 @@ def create_app() -> FastAPI:
         return {"status": "ok", "message": "FastAPI is live"}
 
     # 3. Mount API routers
+    # Mount auth router under all possible prefixes
+    app.include_router(auth_router, prefix="/api", tags=["Auth"])
     app.include_router(auth_router, prefix="/api/auth", tags=["Auth"])
+    app.include_router(auth_router, prefix="", tags=["Auth Root"])
+
+    # Mount exam router
     app.include_router(exam_router, prefix="/api/exam", tags=["Exam"])
+    app.include_router(exam_router, prefix="/api", tags=["Exam Fallback"])
+    app.include_router(exam_router, prefix="", tags=["Exam Root"])
+
+    # Mount admin router
     app.include_router(admin_router, prefix="/api/admin", tags=["Admin"])
+    app.include_router(admin_router, prefix="", tags=["Admin Root"])
 
     # Fallback mounts without /api prefix
     app.include_router(auth_router, prefix="/auth", tags=["Auth Fallback"])
