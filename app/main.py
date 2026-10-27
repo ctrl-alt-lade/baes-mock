@@ -27,6 +27,8 @@ def create_app() -> FastAPI:
     )
 
     # 2. Health check endpoints (Both /api/health and /health so neither fails)
+    # 2. Health check and root endpoints
+    @app.get("/", tags=["Health Check"])
     @app.get("/api/health", tags=["Health Check"])
     @app.get("/health", tags=["Health Check"])
     @app.get("/api/ping", tags=["Health Check"])
