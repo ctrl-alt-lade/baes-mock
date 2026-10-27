@@ -1,8 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/api/index.py"
+      "source": "/api/(.*)",
+      "destination": "/api/index.py?__vercel_path=/api/$1"
+    },
+    {
+      "source": "/login",
+      "destination": "/api/index.py?__vercel_path=/login"
     }
   ]
 }

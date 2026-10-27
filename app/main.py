@@ -5,7 +5,6 @@ from app.routers.auth import router as auth_router
 from app.routers.exam import router as exam_router
 from app.routers.admin import router as admin_router
 
-
 def create_app() -> FastAPI:
     app = FastAPI(
         title="CBT Application API",
@@ -13,21 +12,14 @@ def create_app() -> FastAPI:
         openapi_url="/api/openapi.json",
     )
 
-    # --- VERCEL PATH REWRITE FIX ---
-    # When Vercel routes traffic through api/index.py, it alters the request path 
-    # to literally "api/index.py", stripping the real endpoint (e.g. "questions").
-    # This middleware recovers the true path from the raw URL and forces FastAPI to use it.
+    # --- VERCEL PATH RECOVERY ---
     @app.middleware("http")
     async def fix_vercel_routing(request: Request, call_next):
-        # request.url.path contains the true URL the user requested (e.g., "/api/questions")
-        true_path = request.url.path
-        
-        # If Vercel mangled the path string inside the ASGI scope, overwrite it with the true path.
-        if "index.py" in request.scope.get("path", ""):
-            request.scope["path"] = true_path
-            
-        response = await call_next(request)
-        return response
+        # Read the true path we injected via vercel.json
+        vercel_path = request.query_params.get("__vercel_path")
+        if vercel_path:
+            request.scope["path"] = vercel_path
+        return await call_next(request)
 
     app.add_middleware(
         CORSMiddleware,
@@ -37,41 +29,27 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
-    # Health check
     @app.get("/api/health")
     @app.get("/health")
     async def health():
         return {"status": "ok"}
 
-    # Mount auth router under all possible path prefixes
+    # Mount routers
     app.include_router(auth_router, prefix="/api/auth", tags=["Auth"])
     app.include_router(auth_router, prefix="/auth", tags=["Auth"])
     app.include_router(auth_router, prefix="/api", tags=["Auth"])
     app.include_router(auth_router, prefix="", tags=["Auth"])
 
-    # Mount admin router under all possible path prefixes
     app.include_router(admin_router, prefix="/api/admin", tags=["Admin"])
     app.include_router(admin_router, prefix="/admin", tags=["Admin"])
     app.include_router(admin_router, prefix="/api", tags=["Admin"])
     app.include_router(admin_router, prefix="", tags=["Admin"])
 
-    # Mount exam router
     app.include_router(exam_router, prefix="/api/exam", tags=["Exam"])
     app.include_router(exam_router, prefix="/exam", tags=["Exam"])
     app.include_router(exam_router, prefix="/api", tags=["Exam"])
     app.include_router(exam_router, prefix="", tags=["Exam"])
 
-    # --- VERCEL DEBUG TRAP ---
-    @app.api_route("/{full_path:path}", methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"])
-    async def catch_all(request: Request, full_path: str):
-        return {
-            "detail": "Trap Triggered",
-            "received_path": full_path,
-            "actual_url": str(request.url),
-            "headers": dict(request.headers)
-        }
-
     return app
-
 
 app = create_app()

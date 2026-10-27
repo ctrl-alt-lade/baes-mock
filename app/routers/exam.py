@@ -7,7 +7,7 @@ from app.database import db
 from app.models import AnswerPayload
 from app.routers.auth import get_student_record
 
-router = APIRouter(prefix="/api", tags=["Examination"])
+router = APIRouter(tags=["Examination"])
 
 # ================= EXAM CONFIGURATION & PRESETS =================
 EXAM_MODE = "35"  # Toggle between "35", "70", or "all"
