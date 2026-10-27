@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.routers.auth import router as auth_router
@@ -44,6 +44,16 @@ def create_app() -> FastAPI:
     app.include_router(exam_router, prefix="/exam", tags=["Exam"])
     app.include_router(exam_router, prefix="/api", tags=["Exam"])
     app.include_router(exam_router, prefix="", tags=["Exam"])
+
+    # --- VERCEL DEBUG TRAP ---
+    @app.api_route("/{full_path:path}", methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"])
+    async def catch_all(request: Request, full_path: str):
+        return {
+            "detail": "Trap Triggered",
+            "received_path": full_path,
+            "actual_url": str(request.url),
+            "headers": dict(request.headers)
+        }
 
     return app
 
