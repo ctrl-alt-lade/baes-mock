@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAES CBT Examination - Official Performance Scorecard</title>
+  <link rel="icon" type="image/png" href="assets/baes-logo.png">
+  <link rel="alternate icon" type="image/jpeg" href="assets/baes-logo.jpg">
+  <link rel="apple-touch-icon" href="assets/baes-logo.png">
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- 1. Tailwind CDN Script Loaded First -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 2. Tailwind Config with Custom BAES Colors Loaded Immediately After -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            baes: {
+              red: '#C22032',
+              blue: '#1E64A5',
+              gold: '#F2B235',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media print {
+      body {
+        background: white !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-border {
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col font-sans antialiased selection:bg-baes-red selection:text-white">
+
+  <!-- Top Academic Navigation Bar with BAES Branding -->
+  <header class="bg-white border-b border-slate-200 py-4 shadow-sm no-print">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img
+          src="assets/baes-logo.png"
+          alt="BAES Logo"
+          class="w-11 h-11 rounded-xl object-contain bg-white p-0.5 border-2 border-baes-gold shadow-sm"
+        />
+        <div>
+          <h1 class="text-base font-extrabold text-slate-900 leading-tight flex items-center gap-1.5">
+            <span>Bowen University</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-red-100 text-baes-red font-bold">BAES</span>
+          </h1>
+          <p class="text-xs text-slate-500">Official Candidate Result Verification</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2">
+        <button
+          onclick="window.print()"
+          class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs rounded-xl transition-all flex items-center space-x-1.5"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+          </svg>
+          <span>Print Slip</span>
+        </button>
+        <button
+          id="btn-logout"
+          class="px-3.5 py-2 bg-red-50 hover:bg-red-100 text-baes-red font-bold text-xs rounded-xl transition-colors border border-red-200"
+        >
+          Logout & Exit
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scorecard Document -->
+  <main class="flex-grow max-w-4xl w-full mx-auto p-4 md:py-8 pb-20">
+    
+    <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-200 overflow-hidden print-border">
+      
+      <!-- Banner Header with BAES Colors -->
+      <div class="bg-gradient-to-r from-baes-blue via-blue-900 to-baes-blue text-white p-6 md:p-8 text-center relative overflow-hidden border-b-4 border-baes-gold">
+        <div class="inline-flex p-2.5 rounded-full bg-white/10 text-baes-gold mb-3 border border-baes-gold/30">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h2 class="text-xl md:text-2xl font-black tracking-tight">Examination Result Scorecard</h2>
+        <p class="text-xs md:text-sm text-blue-100 mt-1">Bowen Association of Engineering Students (BAES) Mock Assessment</p>
+      </div>
+
+      <div class="p-6 md:p-8 space-y-6">
+        
+        <!-- Candidate Meta Details -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs">
+          <div>
+            <span class="text-slate-400 font-semibold uppercase tracking-wider block">Candidate Name</span>
+            <span id="res-student-name" class="font-bold text-slate-900 text-sm mt-0.5 block">Loading...</span>
+          </div>
+          <div>
+            <span class="text-slate-400 font-semibold uppercase tracking-wider block">Matric Number</span>
+            <span id="res-matric-no" class="font-bold text-baes-blue text-sm mt-0.5 block font-mono">Loading...</span>
+          </div>
+          <div>
+            <span class="text-slate-400 font-semibold uppercase tracking-wider block">Submission Status</span>
+            <span class="inline-flex items-center px-2 py-0.5 mt-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800">
+              Verified & Recorded
+            </span>
+          </div>
+          <div>
+            <span class="text-slate-400 font-semibold uppercase tracking-wider block">Grading Standard</span>
+            <span class="font-bold text-slate-700 text-sm mt-0.5 block">Nigerian 5.00 Scale</span>
+          </div>
+        </div>
+
+        <!-- Final GPA Box with exact requested classes -->
+        <div class="mt-6 p-6 bg-baes-blue text-white rounded-lg text-center shadow-lg">
+          <span class="text-xs font-semibold text-blue-100 uppercase tracking-wider block mb-1">Grade Point Average</span>
+          <div class="flex items-baseline justify-center space-x-2">
+            <span id="res-final-gpa" class="text-4xl font-bold">0.00</span>
+            <span class="text-baes-gold text-lg font-bold">/ 5.00</span>
+          </div>
+          <p id="res-academic-standing" class="text-sm font-semibold text-blue-100 mt-2">
+            Calculating standing...
+          </p>
+        </div>
+
+        <!-- Individual Course Scores Breakdown -->
+        <div class="pt-2">
+          <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">
+            Course Performance Breakdown
+          </h4>
+          
+          <div class="overflow-x-auto border border-slate-200 rounded-2xl">
+            <table class="w-full text-left text-xs md:text-sm">
+              <thead class="bg-slate-100 text-slate-700 uppercase font-bold text-[11px] tracking-wider border-b border-slate-200">
+                <tr>
+                  <th class="p-3.5">Course Code</th>
+                  <th class="p-3.5">Credit Units</th>
+                  <th class="p-3.5">Score (%)</th>
+                  <th class="p-3.5">Grade</th>
+                  <th class="p-3.5">Grade Point (GP)</th>
+                  <th class="p-3.5 text-right">Quality Points (QP)</th>
+                </tr>
+              </thead>
+              <tbody id="course-breakdown-body" class="divide-y divide-slate-100 font-medium text-slate-800">
+                <!-- Dynamically generated rows with score color logic -->
+              </tbody>
+              <tfoot class="bg-slate-50 font-bold text-slate-900 border-t border-slate-200">
+                <tr>
+                  <td class="p-3.5">Total Cumulative</td>
+                  <td id="res-total-units" class="p-3.5">8 Units</td>
+                  <td class="p-3.5">-</td>
+                  <td class="p-3.5">-</td>
+                  <td class="p-3.5">-</td>
+                  <td id="res-total-qp" class="p-3.5 text-right font-mono text-baes-blue font-bold">0.00 QP</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <!-- Nigerian Grading Scale Guide -->
+        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-600">
+          <span class="font-bold text-slate-700 block mb-1">Nigerian 5-Point System Standard:</span>
+          <p>
+            <strong>A (70-100%)</strong> = 5 GP &nbsp;•&nbsp; 
+            <strong>B (60-69%)</strong> = 4 GP &nbsp;•&nbsp; 
+            <strong>C (50-59%)</strong> = 3 GP &nbsp;•&nbsp; 
+            <strong>D (45-49%)</strong> = 2 GP &nbsp;•&nbsp; 
+            <strong>E (40-44%)</strong> = 1 GP &nbsp;•&nbsp; 
+            <strong class="text-baes-red">F (0-39%) = 0 GP</strong>
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Fixed Footer: "The catalyst" Branding -->
+  <footer class="fixed bottom-0 left-0 right-0 z-30 bg-white/90 backdrop-blur-md border-t border-slate-200 py-3 text-center shadow-sm no-print">
+    <div class="flex items-center justify-center space-x-1.5">
+      <span class="text-gray-500 text-xs tracking-wide uppercase">Powered by</span>
+      <span class="text-baes-blue font-extrabold text-sm uppercase tracking-widest">The catalyst</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/state.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const results = window.CBT_State.getResults();
+      const session = window.CBT_State.getSession();
+
+      // If no results, send back to login
+      if (!results) {
+        alert("No exam submission results found in session.");
+        window.location.href = "index.html";
+        return;
+      }
+
+      // Populate Candidate Info
+      document.getElementById("res-student-name").textContent =
+        results.student_name || session?.name || "Candidate";
+      document.getElementById("res-matric-no").textContent =
+        results.matric_no || session?.matric_no || "N/A";
+
+      // GPA Display
+      const gpa = parseFloat(results.gpa || 0).toFixed(2);
+      document.getElementById("res-final-gpa").textContent = gpa;
+
+      // Standing classification
+      const standingEl = document.getElementById("res-academic-standing");
+      const numGpa = parseFloat(gpa);
+      if (numGpa >= 4.5) {
+        standingEl.textContent = "First Class Honours (Distinction)";
+      } else if (numGpa >= 3.5) {
+        standingEl.textContent = "Second Class Honours (Upper Division)";
+      } else if (numGpa >= 2.4) {
+        standingEl.textContent = "Second Class Honours (Lower Division)";
+      } else if (numGpa >= 1.5) {
+        standingEl.textContent = "Third Class Honours";
+      } else {
+        standingEl.textContent = "Pass / Probational Standing";
+      }
+
+      // Build Table Rows
+      const tbody = document.getElementById("course-breakdown-body");
+      tbody.innerHTML = "";
+
+      const breakdown = results.course_breakdown || results.breakdown || {};
+      const courses = ["PHY 101", "CHM 101", "MTH 101"];
+
+      courses.forEach((course) => {
+        const item = breakdown[course] || {};
+        const score = item.score_percentage !== undefined ? item.score_percentage : (results.scores?.[course] || 0.0);
+        const units = item.credit_units || (course === "MTH 101" ? 2 : 3);
+        const gp = item.grade_point !== undefined ? item.grade_point : (results.grade_points?.[course] || 0);
+        const letter = item.letter_grade || (gp === 5 ? "A" : gp === 4 ? "B" : gp === 3 ? "C" : gp === 2 ? "D" : gp === 1 ? "E" : "F");
+        const qp = item.quality_points !== undefined ? item.quality_points : (gp * units);
+
+        // Highlight scores below 40% with text-baes-red
+        const scoreColorClass = score < 40 ? "text-baes-red font-bold" : "text-emerald-700 font-bold";
+
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-slate-50/80 transition-colors";
+        tr.innerHTML = `
+          <td class="p-3.5 font-bold text-slate-900">${course}</td>
+          <td class="p-3.5 text-slate-600">${units}</td>
+          <td class="p-3.5 ${scoreColorClass}">${parseFloat(score).toFixed(1)}%</td>
+          <td class="p-3.5">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg text-xs font-black ${
+              letter === "A" ? "bg-emerald-100 text-emerald-800" :
+              letter === "B" ? "bg-blue-100 text-baes-blue" :
+              letter === "C" ? "bg-amber-100 text-amber-800" :
+              "bg-red-100 text-baes-red"
+            }">
+              ${letter}
+            </span>
+          </td>
+          <td class="p-3.5 text-slate-700">${gp}</td>
+          <td class="p-3.5 text-right font-mono font-bold text-slate-900">${qp.toFixed(1)}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // Totals
+      if (results.total_credit_units) {
+        document.getElementById("res-total-units").textContent = `${results.total_credit_units} Units`;
+      }
+      if (results.total_quality_points !== undefined) {
+        document.getElementById("res-total-qp").textContent = `${parseFloat(results.total_quality_points).toFixed(1)} QP`;
+      }
+
+      // Logout handler
+      document.getElementById("btn-logout").addEventListener("click", () => {
+        window.CBT_State.clearSession();
+        window.location.href = "index.html";
+      });
+    });
+  </script>
+</body>
+</html>

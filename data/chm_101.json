@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "CHM101_001",
+    "course": "CHM 101",
+    "question": "What does Dalton's third postulate state regarding chemical changes?",
+    "options": [
+      "Atoms are created during chemical changes.",
+      "Atoms are the units of chemical changes.",
+      "Compounds are broken into new elements.",
+      "Mass is converted into atoms."
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_002",
+    "course": "CHM 101",
+    "question": "When macroscopic quantities of silver-coloured mercury and reddish bromine are mixed at room temperature, what is the chemical formula of the resulting white solid?",
+    "options": [
+      "\\(HgBr \\)",
+      "\\(Hg_2Br \\)",
+      "\\(HgBr_2 \\)",
+      "\\(Hg_2Br_2 \\)"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_003",
+    "course": "CHM 101",
+    "question": "According to the notes, what is the ratio of bromine atoms to mercury atoms in any pure sample of mercury (II) bromide?",
+    "options": [
+      "1:2",
+      "1:1",
+      "2:1",
+      "3:1"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_004",
+    "course": "CHM 101",
+    "question": "Which of the following is described as a physical change rather than a chemical change?",
+    "options": [
+      "Smelting iron.",
+      "Water evaporating to vapour.",
+      "Sodium metal encountering liquid water.",
+      "Burning fuels."
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_005",
+    "course": "CHM 101",
+    "question": "In a balanced chemical equation, if a substance does not have a coefficient written in front of it, what is the assumed coefficient?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "It varies based on the reaction."
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_006",
+    "course": "CHM 101",
+    "question": "What is the defining characteristic of a single-replacement reaction?",
+    "options": [
+      "Two compounds react to form two new compounds.",
+      "A compound breaks down into two elements.",
+      "One element is substituted for another element in a compound.",
+      "Two elements combine to form a single compound."
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_007",
+    "course": "CHM 101",
+    "question": "Based on the activity series provided in the notes, which element is capable of replacing Sodium \\((Na) \\) in a single-replacement reaction?",
+    "options": [
+      "\\(Mg \\)",
+      "\\(Ba \\)",
+      "\\(Zn \\)",
+      "\\(Fe \\)"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_008",
+    "course": "CHM 101",
+    "question": "What type of reaction is represented by \\(\\text{CuCl}_2(aq) + 2\\text{AgNO}_3(aq) \\rightarrow \\text{Cu(NO}_3)_2(aq) + 2\\text{AgCl}(s)\\)?",
+    "options": [
+      "Single-replacement reaction",
+      "Double-replacement reaction",
+      "Decomposition reaction",
+      "Synthesis reaction"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_009",
+    "course": "CHM 101",
+    "question": "According to the solubility rules, compounds containing which of the following ions are generally insoluble unless paired with an exception?",
+    "options": [
+      "\\(Na^+ \\)",
+      "\\(NO_3^- \\)",
+      "\\(CO_3^\\{2-\\} \\)",
+      "\\(NH_4^+ \\)"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_010",
+    "course": "CHM 101",
+    "question": "Which of the following compounds is considered soluble in water without any exceptions?",
+    "options": [
+      "Compounds of \\(Cl^- \\)",
+      "Compounds of \\(SO_4^\\{2-\\} \\)",
+      "Compounds of \\(CH_3COO^- \\)",
+      "Compounds of \\(PO_4^\\{3-\\} \\)"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_011",
+    "course": "CHM 101",
+    "question": "How is oxidation defined in terms of hydrogen?",
+    "options": [
+      "The addition of hydrogen to an element.",
+      "The addition of hydrogen to a compound.",
+      "The removal of hydrogen from a compound.",
+      "The transfer of a hydrogen ion."
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_012",
+    "course": "CHM 101",
+    "question": "In the reaction \\(\\text{Fe}_2\\text{O}_3 + 3\\text{CO} \\rightarrow 2\\text{Fe} + 3\\text{CO}_2\\), what process does \\(\\text{Fe}_2\\text{O}_3\\) undergo?",
+    "options": [
+      "Oxidation",
+      "Reduction",
+      "Hydration",
+      "Sublimation"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_013",
+    "course": "CHM 101",
+    "question": "What is the general rule for the oxidation number of an uncombined atom?",
+    "options": [
+      "-1",
+      "0",
+      "+1",
+      "+2"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_014",
+    "course": "CHM 101",
+    "question": "What is the oxidation number of sulfur in \\(Na_2SO_3 \\)?",
+    "options": [
+      "+2",
+      "+4",
+      "+6",
+      "-2"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_015",
+    "course": "CHM 101",
+    "question": "What is the oxidation number of oxygen in \\(H_2O_2 \\)?",
+    "options": [
+      "-2",
+      "-1",
+      "0",
+      "+1"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_016",
+    "course": "CHM 101",
+    "question": "Which of the following is a common strong oxidizing agent according to the provided notes?",
+    "options": [
+      "Thiosulphate ion \\((S_2O_3^\\{2-\\}) \\)",
+      "Permanganate ion \\((MnO_4^-) \\)",
+      "Carbon \\((C) \\)",
+      "Iodide ion \\((I^-) \\)"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_017",
+    "course": "CHM 101",
+    "question": "When balancing a redox equation in an acidic medium, how do you balance the oxygen atoms?",
+    "options": [
+      "By adding \\(H_2O \\)",
+      "By adding \\(O_2 \\)",
+      "By adding \\(OH^- \\)",
+      "By adding \\(H^+ \\)"
+    ],
+    "answer_index": 0
+  },
+  {
+    "id": "CHM101_018",
+    "course": "CHM 101",
+    "question": "What is a disproportionation reaction?",
+    "options": [
+      "A reaction where two different compounds form a single product.",
+      "A reaction where the same substance is both oxidized and reduced.",
+      "A reaction that only occurs in a basic medium.",
+      "A reaction that does not involve any electron transfer."
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_019",
+    "course": "CHM 101",
+    "question": "In the reaction \\(\\text{H}_2\\text{O}_2(aq) + \\text{Cl}_2(g) + 2\\text{OH}^-(aq) \\rightarrow 2\\text{H}_2\\text{O} + 2\\text{Cl}^-(aq) + \\text{O}_2(g)\\), what is the role of hydrogen peroxide?",
+    "options": [
+      "Catalyst",
+      "Oxidizing agent",
+      "Reducing agent",
+      "Precipitate"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_020",
+    "course": "CHM 101",
+    "question": "What is the oxidation number of oxygen in \\(KO_2 \\)?",
+    "options": [
+      "-2",
+      "-1",
+      "\\(-\\frac{1}{2}\\)",
+      "0"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_021",
+    "course": "CHM 101",
+    "question": "The word 'stoichiometry' is derived from Greek words meaning:",
+    "options": [
+      "Chemical balance",
+      "Measure of elements",
+      "Reactant yield",
+      "Mass conservation"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_022",
+    "course": "CHM 101",
+    "question": "In a balanced chemical equation, the coefficients specify the relative amounts of substances in terms of:",
+    "options": [
+      "Mass in grams",
+      "Volume in liters",
+      "Moles",
+      "Density"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_023",
+    "course": "CHM 101",
+    "question": "Which term describes the reactant that is completely consumed in a chemical reaction and determines the amount of product formed?",
+    "options": [
+      "Excess reactant",
+      "Theoretical reactant",
+      "Limiting reactant",
+      "Actual reactant"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_024",
+    "course": "CHM 101",
+    "question": "How is the percent yield of a chemical reaction calculated?",
+    "options": [
+      "\\(\\frac{\\text{Theoretical Yield}}{\\text{Actual Yield}} \\times 100\\)",
+      "\\(\\frac{\\text{Actual Yield}}{\\text{Theoretical Yield}} \\times 100\\)",
+      "\\(\\text{Actual Yield} - \\text{Theoretical Yield}\\)",
+      "\\(\\frac{\\text{Actual Yield}}{\\text{Theoretical Yield}}\\) "
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_025",
+    "course": "CHM 101",
+    "question": "For the combustion of octane: \\(2\\text{C}_8\\text{H}_{18}(l) + 25\\text{O}_2(g) \\rightarrow 16\\text{CO}_2(g) + 18\\text{H}_2\\text{O}(g)\\), how many moles of \\(\\text{CO}_2\\) form when 22.0 moles of \\(\\text{C}_8\\text{H}_{18}\\) burn?",
+    "options": [
+      "22.0 mol",
+      "88.0 mol",
+      "176 mol",
+      "352 mol"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_026",
+    "course": "CHM 101",
+    "question": "What is the state of a reversible reaction when the two opposing reactions occur at the same rate and the concentrations of reactants and products do not change with time?",
+    "options": [
+      "Chemical kinetics",
+      "Chemical equilibrium",
+      "Molecularity",
+      "Sublimation"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_027",
+    "course": "CHM 101",
+    "question": "For the reaction \\(aA(aq) + bB(aq) \\rightleftharpoons cC(aq) + dD(aq)\\), what is the correct expression for \\(K_c\\)?",
+    "options": [
+      "\\(\\frac{[A]^a[B]^b}{[C]^c[D]^d} \\)",
+      "\\(\\frac{[C]^c[D]^d}{[A]^a[B]^b} \\)",
+      "\\([C]^c[D]^d - [A]^a[B]^b \\)",
+      "\\(k[A]^a[B]^b \\)"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_028",
+    "course": "CHM 101",
+    "question": "What is the relationship between the equilibrium constant with respect to pressure \\(K_p \\) and concentration \\(K_c \\)?",
+    "options": [
+      "\\(K_p = K_c(RT)^\\{\\Delta n\\} \\)",
+      "\\(K_p = \\frac{K_c}\\{(RT)^\\{\\Delta n\\}\\} \\)",
+      "\\(K_p = K_c + \\Delta n(RT) \\)",
+      "\\(K_p = K_c(RT)^\\{-\\Delta n\\} \\)"
+    ],
+    "answer_index": 0
+  },
+  {
+    "id": "CHM101_029",
+    "course": "CHM 101",
+    "question": "If \\(\\Delta n > 0\\) for a gaseous reaction, which of the following is true?",
+    "options": [
+      "\\(K_p < K_c \\)",
+      "\\(K_p = K_c \\)",
+      "\\(K_p > K_c \\)",
+      "The system is not at equilibrium."
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_030",
+    "course": "CHM 101",
+    "question": "What does it mean if the reaction quotient \\(Q \\) is greater than \\(K_c \\)?",
+    "options": [
+      "The chemical reaction will be at equilibrium.",
+      "The chemical reaction will shift to the right.",
+      "The chemical reaction will shift to the left.",
+      "The reaction quotient is not related to reaction direction."
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_031",
+    "course": "CHM 101",
+    "question": "The van't Hoff isotherm gives the relationship between standard free energy change and the equilibrium constant. Which equation correctly represents this?",
+    "options": [
+      "\\(\\Delta G = RT \\ln K \\)",
+      "\\(\\Delta G = -RT \\ln K \\)",
+      "\\(\\Delta G = \\Delta H - T\\Delta S \\)",
+      "\\(\\Delta G = -nFE^\\circ_\\{cell\\} \\)"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_032",
+    "course": "CHM 101",
+    "question": "In the Arrhenius concept, what is a base?",
+    "options": [
+      "A substance that dissolves in water to produce \\(H^+ \\) ions.",
+      "An electron pair donor.",
+      "A substance that dissolves in water to increase the \\(OH^- \\) ion concentration.",
+      "A proton acceptor."
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_033",
+    "course": "CHM 101",
+    "question": "According to the Bronsted-Lowry theory, an acid is a:",
+    "options": [
+      "Proton acceptor",
+      "Proton donor",
+      "Electron pair donor",
+      "Electron pair acceptor"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_034",
+    "course": "CHM 101",
+    "question": "What is the conjugate base of \\(CH_3COOH \\)?",
+    "options": [
+      "\\(H_3O^+ \\)",
+      "\\(CH_3COO^- \\)",
+      "\\(OH^- \\)",
+      "\\(CO_3^\\{2-\\} \\)"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_035",
+    "course": "CHM 101",
+    "question": "Which of the following acids is considered a triprotic acid?",
+    "options": [
+      "\\(HCl \\)",
+      "\\(H_2SO_4 \\)",
+      "\\(CH_3COOH \\)",
+      "\\(H_3PO_4 \\)"
+    ],
+    "answer_index": 3
+  },
+  {
+    "id": "CHM101_036",
+    "course": "CHM 101",
+    "question": "Substances that can behave as both an acid and a base, such as water, are referred to as:",
+    "options": [
+      "Protophilic",
+      "Diprotic",
+      "Amphiprotic",
+      "Polyprotic"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_037",
+    "course": "CHM 101",
+    "question": "In the Lewis theory of acids and bases, a base is defined as an:",
+    "options": [
+      "Electron pair acceptor",
+      "Electron pair donor",
+      "Proton donor",
+      "Proton acceptor"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_038",
+    "course": "CHM 101",
+    "question": "What type of bond is produced by the reaction between a Lewis acid and a Lewis base?",
+    "options": [
+      "Ionic bond",
+      "Coordinate covalent bond",
+      "Hydrogen bond",
+      "Metallic bond"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_039",
+    "course": "CHM 101",
+    "question": "Which of the following is listed as an example of a strong acid in the notes?",
+    "options": [
+      "Acetic acid",
+      "Carbonic acid",
+      "Perchloric acid",
+      "Hydrogen sulfide"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_040",
+    "course": "CHM 101",
+    "question": "Which statement correctly describes the relationship between a strong acid and its conjugate base?",
+    "options": [
+      "A strong acid has a strong conjugate base.",
+      "A strong acid has a weak conjugate base.",
+      "A strong acid does not have a conjugate base.",
+      "A strong acid's conjugate base is always water."
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_041",
+    "course": "CHM 101",
+    "question": "What is the value of the ionic product of water, \\(K_w \\), at 298 K?",
+    "options": [
+      "\\(1.0 \\times 10^\\{-7\\} \\text\\{ mol\\}^2\\text\\{dm\\}^\\{-6\\} \\)",
+      "\\(1.0 \\times 10^\\{-10\\} \\text\\{ mol\\}^2\\text\\{dm\\}^\\{-6\\} \\)",
+      "\\(1.0 \\times 10^\\{-14\\} \\text\\{ mol\\}^2\\text\\{dm\\}^\\{-6\\} \\)",
+      "\\(1.0 \\times 10^\\{14\\} \\text\\{ mol\\}^2\\text\\{dm\\}^\\{-6\\} \\)"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_042",
+    "course": "CHM 101",
+    "question": "What does the equation \\(pH + pOH \\) equal?",
+    "options": [
+      "7",
+      "10",
+      "14",
+      "\\(pK_a \\)"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_043",
+    "course": "CHM 101",
+    "question": "Which equation represents the Oswald Dilution law for a weak acid?",
+    "options": [
+      "\\(\\alpha = K_a V \\)",
+      "\\(\\alpha = \\frac{K_a}{V} \\)",
+      "\\(\\alpha = \\sqrt{K_a V} \\)",
+      "\\(\\alpha = K_a^2 V \\)"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_044",
+    "course": "CHM 101",
+    "question": "Matter is defined as anything that has weight and occupies space. What is the SI unit for measuring mass?",
+    "options": [
+      "gram (g)",
+      "kilogramme (kg)",
+      "Newton (N)",
+      "pound (lb)"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_045",
+    "course": "CHM 101",
+    "question": "Which of the following is defined as a substance which cannot be split into simpler units by chemical action?",
+    "options": [
+      "An element",
+      "A compound",
+      "A mixture",
+      "A molecule"
+    ],
+    "answer_index": 0
+  },
+  {
+    "id": "CHM101_046",
+    "course": "CHM 101",
+    "question": "What phenomenon occurs when a liquid changes to a solid at a temperature below its normal freezing point?",
+    "options": [
+      "Sublimation",
+      "Condensation",
+      "Super-cooling",
+      "Vaporization"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_047",
+    "course": "CHM 101",
+    "question": "The direct change of a substance from the solid to the gas state without first forming a liquid is called:",
+    "options": [
+      "Evaporation",
+      "Sublimation",
+      "Condensation",
+      "Freezing"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_048",
+    "course": "CHM 101",
+    "question": "Atomicity refers to:",
+    "options": [
+      "The number of protons in an atom.",
+      "The number of atoms in a molecule of a given element.",
+      "The total mass of an atom.",
+      "The number of subatomic particles."
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_049",
+    "course": "CHM 101",
+    "question": "Who stated the first theory of the atom from experimental data in 1803?",
+    "options": [
+      "Democritus",
+      "Boyle",
+      "Lavoisier",
+      "John Dalton"
+    ],
+    "answer_index": 3
+  },
+  {
+    "id": "CHM101_050",
+    "course": "CHM 101",
+    "question": "Which recent subatomic particles were discovered that combine to form protons and neutrons?",
+    "options": [
+      "Electrons and positrons",
+      "Quarks and gluons",
+      "Muons and taus",
+      "Alpha and beta particles"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_051",
+    "course": "CHM 101",
+    "question": "The mass number of an atom is defined as the sum of its:",
+    "options": [
+      "Protons and electrons",
+      "Electrons and neutrons",
+      "Protons and neutrons",
+      "Quarks and gluons"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_052",
+    "course": "CHM 101",
+    "question": "What term describes atoms of an element that exhibit different mass numbers but have the same atomic number?",
+    "options": [
+      "Isomers",
+      "Isotopes",
+      "Isobars",
+      "Allotropes"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_053",
+    "course": "CHM 101",
+    "question": "Which type of electrochemical cell involves spontaneous reactions that produce electricity?",
+    "options": [
+      "Electrolytic cells",
+      "Voltaic cells",
+      "Concentration cells",
+      "Reversible cells"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_054",
+    "course": "CHM 101",
+    "question": "In a cell diagram using cell notation, what does a double vertical line (||) represent?",
+    "options": [
+      "A phase boundary between an electrode and a solution.",
+      "A salt bridge between two solutions.",
+      "A gas-liquid interface.",
+      "The connection to a voltmeter."
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_055",
+    "course": "CHM 101",
+    "question": "What is the standard electrode potential of the Standard Hydrogen Electrode (SHE)?",
+    "options": [
+      "\\(-1.0 \\text\\{ V\\} \\)",
+      "\\(0.0 \\text\\{ V\\} \\)",
+      "\\(1.0 \\text\\{ V\\} \\)",
+      "\\(1.100 \\text\\{ V\\} \\)"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_056",
+    "course": "CHM 101",
+    "question": "In the standard hydrogen electrode, what is the activity of the hydrogen ions in solution at \\(25^\\circ\\text\\{C\\} \\)?",
+    "options": [
+      "0.1 M",
+      "0.5 M",
+      "1 M",
+      "2 M"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_057",
+    "course": "CHM 101",
+    "question": "What is the standard free energy change \\(\\Delta G^\\circ\\) for a cell related to the standard cell potential \\(E^\\circ_{\\text{cell}}\\)?",
+    "options": [
+      "\\(\\Delta G^\\circ = nFE^\\circ_\\{cell\\} \\)",
+      "\\(\\Delta G^\\circ = -nFE^\\circ_\\{cell\\} \\)",
+      "\\(\\Delta G^\\circ = \\frac{-nF}\\{E^\\circ_\\{cell\\}\\} \\)",
+      "\\(\\Delta G^\\circ = -RT \\ln(E^\\circ_\\{cell\\}) \\)"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_058",
+    "course": "CHM 101",
+    "question": "If \\(E^\\circ_\\{cell\\} \\) for a redox reaction is positive, what does this indicate about the reaction?",
+    "options": [
+      "The reaction is spontaneous.",
+      "The reaction is non-spontaneous.",
+      "The reaction is at equilibrium.",
+      "The reaction absorbs electricity."
+    ],
+    "answer_index": 0
+  },
+  {
+    "id": "CHM101_059",
+    "course": "CHM 101",
+    "question": "At standard conditions (298 K), the equation relating \\(E^\\circ_\\{cell\\} \\) to the equilibrium constant \\(K \\) is simplified to:",
+    "options": [
+      "\\(E^\\circ_\\{cell\\} = 0.0592 \\ln K \\)",
+      "\\(E^\\circ_\\{cell\\} = \\frac{0.0592}{n} \\log K \\)",
+      "\\(E^\\circ_\\{cell\\} = \\frac{n}{0.0592} \\log K \\)",
+      "\\(E^\\circ_\\{cell\\} = -0.0592 n \\log K \\)"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_060",
+    "course": "CHM 101",
+    "question": "What does Hund's rule state about the filling of orbitals?",
+    "options": [
+      "Electrons fill higher energy orbitals first.",
+      "Electrons fill orbitals in pairs before filling them singly.",
+      "Electrons fill orbitals singly before pairing occurs.",
+      "Electrons cannot occupy the same orbital."
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_061",
+    "course": "CHM 101",
+    "question": "What is the shape of the s orbital?",
+    "options": [
+      "Dumb-bell",
+      "Double dumb-bell",
+      "Spherical",
+      "Cylindrical"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_062",
+    "course": "CHM 101",
+    "question": "What is the maximum number of electrons that the d orbital can contain?",
+    "options": [
+      "2",
+      "6",
+      "10",
+      "14"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_063",
+    "course": "CHM 101",
+    "question": "In a reaction mechanism, what do you call species that are produced in one step and consumed in a subsequent step?",
+    "options": [
+      "Catalysts",
+      "Products",
+      "Intermediates",
+      "Reactants"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_064",
+    "course": "CHM 101",
+    "question": "Which elementary step in a reaction mechanism determines the overall rate of the reaction?",
+    "options": [
+      "The fastest step",
+      "The final step",
+      "The step with the lowest activation energy",
+      "The slowest step"
+    ],
+    "answer_index": 3
+  },
+  {
+    "id": "CHM101_065",
+    "course": "CHM 101",
+    "question": "What is the molecularity of an elementary reaction that involves two reacting molecules colliding with each other?",
+    "options": [
+      "Unimolecular",
+      "Bimolecular",
+      "Termolecular",
+      "Zeromolecular"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_066",
+    "course": "CHM 101",
+    "question": "The rate law for a unimolecular elementary reaction is:",
+    "options": [
+      "Zeroth order",
+      "First order",
+      "Second order",
+      "Third order"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_067",
+    "course": "CHM 101",
+    "question": "Which of the following defines a zero order reaction?",
+    "options": [
+      "The rate depends linearly on the concentration of the reactant.",
+      "The rate is independent of the concentration of the reactant.",
+      "The rate depends on the square of the concentration.",
+      "The reaction happens instantaneously."
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_068",
+    "course": "CHM 101",
+    "question": "What is the integrated rate equation for a zero order reaction?",
+    "options": [
+      "\\([A] = -k_0 t + [A]_0\\)",
+      "\\(\\ln[A] = -k_1 t + \\ln[A]_0\\)",
+      "\\(\\frac{1}{[A]} = k_2 t + \\frac{1}{[A]_0}\\)",
+      "\\([A] = [A]_0 e^{-kt}\\)"
+    ],
+    "answer_index": 0
+  },
+  {
+    "id": "CHM101_069",
+    "course": "CHM 101",
+    "question": "For a first order reaction, the half-life \\(t_\\{1/2\\} \\) is equal to:",
+    "options": [
+      "\\(\\frac{[A]_0}{2k} \\)",
+      "\\(\\frac{0.693}{k_1} \\)",
+      "\\(\\frac{1}{k_2[A]_0} \\)",
+      "\\(\\frac{2.303}{k} \\)"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_070",
+    "course": "CHM 101",
+    "question": "A key characteristic of the half-life of a first order reaction is that it is:",
+    "options": [
+      "Dependent on the square of the initial concentration.",
+      "Directly proportional to the initial concentration.",
+      "Independent of the initial concentration of the reactant.",
+      "Inversely proportional to the initial concentration."
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_071",
+    "course": "CHM 101",
+    "question": "In a plot of \\(\\ln[X] \\) versus time \\(t \\) for a first order reaction, what does the slope represent?",
+    "options": [
+      "\\(k \\)",
+      "\\(-k \\)",
+      "\\([X]*0 \\)",
+      "\\(\\frac{1}{k} \\)"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_072",
+    "course": "CHM 101",
+    "question": "The hydrolysis of ethyl acetate in a large excess of water is an example of what kind of reaction?",
+    "options": [
+      "Zero order",
+      "Pseudo-first order",
+      "True second order",
+      "Third order"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_073",
+    "course": "CHM 101",
+    "question": "For a second order reaction \\(A + A \\rightarrow P\\), the integrated rate law is:",
+    "options": [
+      "\\(\\frac{1}{[A]} - \\frac{1}{[A]*o} = k_2 t \\)",
+      "\\(\\ln[A] - \\ln[A]*o = -k_2 t \\)",
+      "\\([A] = [A]*o - k_2 t \\)",
+      "\\(\\frac{1}{[A]^2} = \\frac{1}{[A]*o^2} + 2kt \\)"
+    ],
+    "answer_index": 0
+  },
+  {
+    "id": "CHM101_074",
+    "course": "CHM 101",
+    "question": "A buffer solution is described as one which:",
+    "options": [
+      "Completely ionizes in water.",
+      "Speeds up a chemical reaction.",
+      "Resists changes in pH on addition of small amounts of an acid or base.",
+      "Neutralizes completely at pH 7."
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_075",
+    "course": "CHM 101",
+    "question": "An acidic buffer solution can be made by mixing:",
+    "options": [
+      "A strong acid and its conjugate base.",
+      "A weak acid and the soluble salt of the weak acid.",
+      "A strong base and a weak acid.",
+      "Two weak acids."
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_076",
+    "course": "CHM 101",
+    "question": "Which equation is used to calculate the pH of a buffer solution?",
+    "options": [
+      "Arrhenius equation",
+      "Henderson-Hasselbalch equation",
+      "Van't Hoff equation",
+      "Oswald dilution law"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_077",
+    "course": "CHM 101",
+    "question": "The buffering agents in human blood that maintain the pH in the range of 7.35-7.45 are:",
+    "options": [
+      "\\(CH_3COOH / CH_3COO^- \\)",
+      "\\(H_2CO_3 / HCO_3^- \\)",
+      "\\(NH_3 / NH_4^+ \\)",
+      "\\(H_3PO_4 / H_2PO_4^- \\)"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_078",
+    "course": "CHM 101",
+    "question": "What term defines a solution in which the dissolved and undissolved solutes are in equilibrium?",
+    "options": [
+      "Supersaturated solution",
+      "Dilute solution",
+      "Saturated solution",
+      "Unsaturated solution"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_079",
+    "course": "CHM 101",
+    "question": "For a sparingly soluble salt \\(\\text{AgCl}(s) \\rightleftharpoons \\text{Ag}^+(aq) + \\text{Cl}^-(aq)\\), the solubility product \\(K_{sp}\\) is expressed as:",
+    "options": [
+      "\\(\\frac{[Ag^+][Cl^-]}{[AgCl]} \\)",
+      "\\([Ag^+][Cl^-] \\)",
+      "\\([Ag^+] + [Cl^-] \\)",
+      "\\(\\sqrt{[Ag^+][Cl^-]} \\)"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_080",
+    "course": "CHM 101",
+    "question": "When solid \\(AgCl \\) is added to a solution already containing \\(NaCl \\), what happens to the solubility of \\(AgCl \\) due to the presence of \\(Cl^- \\) ions?",
+    "options": [
+      "It increases.",
+      "It decreases.",
+      "It remains unchanged.",
+      "It becomes infinitely soluble."
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_081",
+    "course": "CHM 101",
+    "question": "Chemical kinetics deals with:",
+    "options": [
+      "The yield of chemical reactions.",
+      "The speed with which a chemical reaction occurs.",
+      "The equilibrium state of reactions.",
+      "The atomic structure of molecules."
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_082",
+    "course": "CHM 101",
+    "question": "How does an increase in temperature affect the rate of a chemical reaction?",
+    "options": [
+      "It decreases the rate by lowering activation energy.",
+      "It has no effect on the rate of reaction.",
+      "It increases the rate by increasing the fraction of molecules with energies greater than the activation energy.",
+      "It increases the rate by decreasing the collision frequency."
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_083",
+    "course": "CHM 101",
+    "question": "A catalyst increases the rate of a chemical reaction by:",
+    "options": [
+      "Increasing the temperature of the system.",
+      "Providing an alternative pathway with a lower activation energy.",
+      "Increasing the surface area of the reactants.",
+      "Shifting the equilibrium to the right."
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_084",
+    "course": "CHM 101",
+    "question": "In the rate law \\(R = k[A]^m[B]^n \\), the overall order of the reaction is given by:",
+    "options": [
+      "\\(m \\times n \\)",
+      "\\(m - n \\)",
+      "\\(m + n \\)",
+      "\\(\\frac{m}{n} \\)"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_085",
+    "course": "CHM 101",
+    "question": "Which method of determining rate laws involves keeping the concentrations of all reactants except one in large excess?",
+    "options": [
+      "Integral method",
+      "Half-life method",
+      "Initial rates method",
+      "Isolation method"
+    ],
+    "answer_index": 3
+  },
+  {
+    "id": "CHM101_086",
+    "course": "CHM 101",
+    "question": "The energy barrier that must be surmounted for reactants to transform into products is known as:",
+    "options": [
+      "Free energy",
+      "Activation energy",
+      "Enthalpy",
+      "Kinetic energy"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_087",
+    "course": "CHM 101",
+    "question": "Which equation relates the rate constants at two different temperatures (\\(T_1 \\) and \\(T_2 \\)) to the activation energy \\(E_a \\)?",
+    "options": [
+      "\\(\\ln \\frac{k_2}{k_1} = \\frac{E_a}{R}(\\frac{T_2 - T_1}{T_1 T_2}) \\)",
+      "\\(\\ln \\frac{k_2}{k_1} = -\\frac{E_a}{R}(\\frac{1}{T_1} + \\frac{1}{T_2}) \\)",
+      "\\(\\frac{k_2}{k_1} = E_a R (T_2 - T_1) \\)",
+      "\\(\\Delta G = -RT \\ln K \\)"
+    ],
+    "answer_index": 0
+  },
+  {
+    "id": "CHM101_088",
+    "course": "CHM 101",
+    "question": "An electrical device that measures the potential difference in a cell precisely by generating opposing voltage is called a:",
+    "options": [
+      "Galvanometer",
+      "Potentiometer",
+      "Voltameter",
+      "Coulometer"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_089",
+    "course": "CHM 101",
+    "question": "In electrochemistry, what does a single vertical line (|) in cell notation represent?",
+    "options": [
+      "A salt bridge",
+      "The standard hydrogen electrode",
+      "A boundary (interface) between an electrode and a solution",
+      "A porous plug"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_090",
+    "course": "CHM 101",
+    "question": "Which of the following is true for an electrolytic cell?",
+    "options": [
+      "The reaction occurs spontaneously.",
+      "The cell produces chemical changes by producing electricity.",
+      "The cell has a positive voltage output.",
+      "The reaction is non-spontaneous and requires applied electricity."
+    ],
+    "answer_index": 3
+  },
+  {
+    "id": "CHM101_091",
+    "course": "CHM 101",
+    "question": "When the sum of the oxidation numbers of all atoms in a molecule is taken, what is the result for a neutral molecule?",
+    "options": [
+      "+1",
+      "0",
+      "-1",
+      "It depends on the number of oxygen atoms."
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_092",
+    "course": "CHM 101",
+    "question": "According to the oxidation number rules, what is the oxidation number of an alkali metal (group IA)?",
+    "options": [
+      "+1",
+      "+2",
+      "-1",
+      "0"
+    ],
+    "answer_index": 0
+  },
+  {
+    "id": "CHM101_093",
+    "course": "CHM 101",
+    "question": "The oxidation number of fluorine in its compounds is always:",
+    "options": [
+      "+1",
+      "-1",
+      "-2",
+      "0"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_094",
+    "course": "CHM 101",
+    "question": "What is the formula for calculating theoretical yield?",
+    "options": [
+      "It is calculated directly from the amount of excess reactant.",
+      "It is the mass of product actually produced in the experiment.",
+      "It is the amount of product that can be made based on the amount of limiting reactant.",
+      "It is the percent yield multiplied by the actual yield."
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_095",
+    "course": "CHM 101",
+    "question": "When converting from mass of reactant A to mass of product B, what is the first step in the general conceptual plan?",
+    "options": [
+      "Convert mass A to amount A in moles.",
+      "Convert mass A directly to mass B.",
+      "Convert mass A to amount B in moles.",
+      "Multiply mass A by the molar mass of B."
+    ],
+    "answer_index": 0
+  },
+  {
+    "id": "CHM101_096",
+    "course": "CHM 101",
+    "question": "In a first order reaction, a plot of \\(\\ln[X] \\) vs \\(t \\) is linear. What is the intercept of this line?",
+    "options": [
+      "\\([X]*o \\)",
+      "\\(-k \\)",
+      "\\(\\ln[X]*o \\)",
+      "\\(\\frac{1}{[X]*o} \\)"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_097",
+    "course": "CHM 101",
+    "question": "Which sub-orbital shape is described as a dumb-bell?",
+    "options": [
+      "s orbital",
+      "p orbital",
+      "d orbital",
+      "f orbital"
+    ],
+    "answer_index": 1
+  },
+  {
+    "id": "CHM101_098",
+    "course": "CHM 101",
+    "question": "The Henderson-Hasselbalch equation for an acidic buffer can be written as:",
+    "options": [
+      "\\(pH = pK_a + \\log*\\{10\\} \\frac{[base]}{[acid]} \\)",
+      "\\(pH = pK_a - \\log*\\{10\\} \\frac{[base]}{[acid]} \\)",
+      "\\(pOH = pK_a + \\log*\\{10\\} \\frac{[acid]}{[base]} \\)",
+      "\\(pH = pK_w + \\log*\\{10\\} \\frac{[acid]}{[base]} \\)"
+    ],
+    "answer_index": 0
+  },
+  {
+    "id": "CHM101_099",
+    "course": "CHM 101",
+    "question": "If \\(Q < K_c \\), how does the reaction behave to reach equilibrium?",
+    "options": [
+      "It shifts to the left to favor reactants.",
+      "It remains unchanged as it is already at equilibrium.",
+      "It shifts to the right to favor product formation.",
+      "It stops reacting."
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": "CHM101_100",
+    "course": "CHM 101",
+    "question": "When calculating oxidation numbers, if rule 3 (alkali metals are +1) conflicts with rule 5 (oxygen is -2), which rule takes precedence?",
+    "options": [
+      "Rule 5 takes precedence.",
+      "They cancel out to zero.",
+      "Rule 3 takes precedence as smaller rule numbers supercede larger ones.",
+      "Neither, the oxidation number must be determined experimentally."
+    ],
+    "answer_index": 2
+  }
+]
