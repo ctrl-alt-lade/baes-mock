@@ -13,6 +13,22 @@ def create_app() -> FastAPI:
         openapi_url="/api/openapi.json",
     )
 
+    # --- VERCEL PATH REWRITE FIX ---
+    # When Vercel routes traffic through api/index.py, it alters the request path 
+    # to literally "api/index.py", stripping the real endpoint (e.g. "questions").
+    # This middleware recovers the true path from the raw URL and forces FastAPI to use it.
+    @app.middleware("http")
+    async def fix_vercel_routing(request: Request, call_next):
+        # request.url.path contains the true URL the user requested (e.g., "/api/questions")
+        true_path = request.url.path
+        
+        # If Vercel mangled the path string inside the ASGI scope, overwrite it with the true path.
+        if "index.py" in request.scope.get("path", ""):
+            request.scope["path"] = true_path
+            
+        response = await call_next(request)
+        return response
+
     app.add_middleware(
         CORSMiddleware,
         allow_origins=["*"],
