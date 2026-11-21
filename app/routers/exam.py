@@ -1,6 +1,5 @@
-from typing import Optional
+from typing import Optional, Dict, Any, Tuple, List
 import random
-from typing import Dict, Any, Tuple, List
 from fastapi import APIRouter, HTTPException, status, Query
 from google.cloud import firestore
 from app.database import db
@@ -8,6 +7,9 @@ from app.models import AnswerPayload
 from app.routers.auth import get_student_record
 
 router = APIRouter(tags=["Examination"])
+
+# In-memory cache for grouped questions (persists per warm serverless container)
+_GROUPED_QUESTIONS_CACHE: Optional[Dict[str, List[Dict[str, Any]]]] = None
 
 # ================= EXAM CONFIGURATION & PRESETS =================
 EXAM_MODE = "35"  # Toggle between "35", "70", or "all"
@@ -63,10 +65,15 @@ def calculate_grade_point(percentage: float) -> Tuple[int, str]:
 
 def get_grouped_questions() -> Dict[str, List[Dict[str, Any]]]:
     """
-    Fetch all exam questions from Firestore grouped by course.
+    Fetch all exam questions from Firestore grouped by course, with in-memory caching.
     Questions within each course are sorted deterministically by document ID
     prior to sampling so seeded randomization is 100% reproducible.
     """
+    global _GROUPED_QUESTIONS_CACHE
+
+    if _GROUPED_QUESTIONS_CACHE is not None:
+        return _GROUPED_QUESTIONS_CACHE
+
     if db is None:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
@@ -94,7 +101,8 @@ def get_grouped_questions() -> Dict[str, List[Dict[str, Any]]]:
     for course_name in grouped:
         grouped[course_name].sort(key=lambda q: str(q.get("id", "")))
 
-    return grouped
+    _GROUPED_QUESTIONS_CACHE = grouped
+    return _GROUPED_QUESTIONS_CACHE
 
 
 def select_assigned_questions(
@@ -128,16 +136,14 @@ def select_assigned_questions(
 
 @router.get("/questions")
 def get_questions(matric_no: Optional[str] = Query(None)):
-    # Fallback to a default seed if matric_no is missing
-    matric_clean = matric_no.strip().upper() if matric_no else "DEFAULT_SEED"
     """
     Fetch exam questions for candidate:
     1. Validates required matric_no query parameter.
-    2. Groups questions by course and selects a seeded random subset.
+    2. Groups questions by course (from cache) and selects a seeded random subset.
     3. Shuffles question order per course.
     4. Strips out answer keys before returning to client.
     """
-    clean_matric = matric_no.strip()
+    clean_matric = matric_no.strip() if matric_no else ""
     if not clean_matric:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -151,7 +157,7 @@ def get_questions(matric_no: Optional[str] = Query(None)):
     for course_name in ["PHY 101", "CHM 101", "MTH 101"]:
         for q in assigned_by_course.get(course_name, []):
             q_data = dict(q)
-            # Security: Strip answer keys before returning to client
+            # Security: Strip answer keys on a copy so the cache stays intact
             q_data.pop("answer_index", None)
             q_data.pop("correct_answer", None)
             q_data.pop("correct_index", None)
@@ -166,14 +172,14 @@ def get_questions(matric_no: Optional[str] = Query(None)):
 
 
 @router.post("/submit", summary="Submit Exam and Compute Result")
-async def submit_exam(payload: AnswerPayload):
+def submit_exam(payload: AnswerPayload):
     """
     Grade candidate submission:
     1. Verify student matriculation number and submission eligibility.
     2. Retrieve the deterministic assigned questions for this candidate.
     3. Grade submitted answers against the actual assigned questions.
     4. Calculate percentage scores based on the actual number of questions assigned
-       to each course in the active EXAM_MODE (e.g. PHY: Correct / 12 * 100).
+       to each course in the active EXAM_MODE.
     5. Compute GPA using the Nigerian 5-point scale (PHY=3 units, CHM=3 units, MTH=2 units).
     6. Save results to 'results' collection with a server timestamp.
     7. Mark student 'has_taken' status as true.
